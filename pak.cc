@@ -23,6 +23,13 @@ std::ostream& operator<<(std::ostream& os, Pak::files_t const& files) {
 	return os;
 }
 
+std::ostream& operator<<(std::ostream& os, PakFile const& file) {
+	std::vector<char> buf(file.size);
+	file.get(buf);
+	std::copy(buf.cbegin(), buf.cend(), std::ostreambuf_iterator<char>(os));
+	return os;
+}
+
 namespace {
 	template <unsigned Bytes> unsigned readLE(std::istream& is) {
 		unsigned val = 0;
