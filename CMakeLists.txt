@@ -43,7 +43,7 @@ include_directories(${Boost_INCLUDE_DIRS})
 
 # Find all the libs that don't require extra parameters
 
-foreach(lib LibXML++ ZLIB JPEG PNG ZLIB)
+foreach(lib LibXML++ ZLIB JPEG PNG)
 find_package(${lib})
 	if (${lib}_FOUND)
 		include_directories(${${lib}_INCLUDE_DIRS})
