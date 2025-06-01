@@ -81,7 +81,7 @@ if (ZLIB_FOUND)
 	set(targets ${targets} ss_adpcm_decode)
 
 	add_executable(ss_ipu_conv ipu_conv.cc ipuconvmain.cc pak.cc)
-	target_link_libraries(ss_chc_decode ${Boost_LIBRARIES} ${ZLIB_LIBRARIES})
+	target_link_libraries(ss_ipu_conv ${Boost_LIBRARIES} ${ZLIB_LIBRARIES})
 	set(targets ${targets} ss_ipu_conv)
 endif()
 
