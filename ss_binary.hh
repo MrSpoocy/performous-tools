@@ -1,3 +1,5 @@
+#pragma once
+
 #include "adpcm.h"
 #include "ipuconv.hh"
 

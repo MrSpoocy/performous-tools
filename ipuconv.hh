@@ -1,3 +1,5 @@
+#pragma once
+
 #include "bitfiles.h"
 
 struct t_MBData		/*	Macroblock data	*/

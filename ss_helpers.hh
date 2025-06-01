@@ -1,3 +1,5 @@
+#pragma once
+
 /// @file Some uninteresting helper functions used by ss_extract.
 
 #include <boost/algorithm/string.hpp>
