@@ -85,6 +85,7 @@ Pak::Pak(std::string const& filename) {
 					}
 					f.seekg(pos);
 				}
+				file.filename = name;
 				m_files.insert(std::make_pair(name, file));
 			}
 			break;
@@ -119,6 +120,7 @@ Pak::Pak(std::string const& filename) {
 				toto[1] = '\0';
 				if (ext_idx) name += std::string(".") + (ext_idx <= ext.size() ? ext[ext_idx-1] : std::string(toto));
 				std::replace(name.begin(), name.end(), '\\', '/');
+				file.filename = name;
 				m_files.insert(std::make_pair(name, file));
 			}
 			break;

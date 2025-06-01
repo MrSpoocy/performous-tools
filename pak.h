@@ -10,6 +10,7 @@
 struct PakFile {
 	PakFile(std::string const& pakfilename): pakname(pakfilename), offset(), size(), crc(), zlibmode(), zlibsize() {}
 	std::string pakname;
+	std::string filename;
 	unsigned offset;
 	unsigned size;
 	unsigned crc;
