@@ -79,6 +79,10 @@ if (ZLIB_FOUND)
 	add_executable(ss_adpcm_decode adpcm_decode.cc pak.cc)
 	target_link_libraries(ss_adpcm_decode ${ZLIB_LIBRARIES})
 	set(targets ${targets} ss_adpcm_decode)
+
+	add_executable(ss_ipu_conv ipu_conv.cc ipuconvmain.cc pak.cc)
+	target_link_libraries(ss_chc_decode ${Boost_LIBRARIES} ${ZLIB_LIBRARIES})
+	set(targets ${targets} ss_ipu_conv)
 endif()
 
 add_executable(ss_archive_extract archive_extract.cc)
@@ -87,8 +91,7 @@ set(targets ${targets} ss_archive_extract)
 
 add_executable(gh_fsb_decrypt gh_fsb/fsbext.c)
 add_executable(gh_xen_decrypt gh_xen_decrypt.cc)
-add_executable(ss_ipu_conv ipu_conv.cc ipuconvmain.cc pak.cc)
-set(targets ${targets} gh_fsb_decrypt gh_xen_decrypt ss_adpcm_decode ss_ipu_conv)
+set(targets ${targets} gh_fsb_decrypt gh_xen_decrypt ss_adpcm_decode)
 
 # add install target:
 if(WIN32)

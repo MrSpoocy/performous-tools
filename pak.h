@@ -1,7 +1,6 @@
 #pragma once
 
-#include "zlib.h"
-#include <boost/cstdint.hpp>
+#include <zlib.h>
 #include <string>
 #include <fstream>
 #include <map>
