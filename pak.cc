@@ -128,6 +128,10 @@ Pak::Pak(std::string const& filename) {
 	}
 }
 
+bool Pak::has(std::string const& filename) const {
+	return m_files.find(filename) != m_files.end();
+}
+
 PakFile const& Pak::operator[](std::string const& filename) const {
 	files_t::const_iterator r = m_files.find(filename);
 	if (r == m_files.end()) throw std::runtime_error("File not found: " + filename);

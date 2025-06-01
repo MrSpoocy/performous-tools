@@ -44,6 +44,7 @@ class Pak {
 	typedef std::map<std::string, PakFile> files_t;
 	Pak(std::string const& filename);
 	files_t const& files() const { return m_files; }
+	bool has(std::string const& filename) const;
 	PakFile const& operator[](std::string const& filename) const;
   private:
 	files_t m_files;
